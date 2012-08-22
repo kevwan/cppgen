@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <author><![CDATA[Kevin Wan <wanjunfeng@gmail.com>]]></author>
+    <wrapper_prefix></wrapper_prefix>
+    <default_cpp_suffix>.cc</default_cpp_suffix>
+    <unit_test_dir>test</unit_test_dir>
+    <options>
+        <option>
+            <short_option>h</short_option>
+            <long_option>header</long_option>
+            <has_argument>true</has_argument>
+            <package>cppheadergen</package>
+            <slot_class>CppHeaderGen</slot_class>
+            <parse_order>2</parse_order>
+            <comment>specify header file to generate or to generate cpp file base on this header file</comment>
+        </option>
+        <option>
+            <short_option>c</short_option>
+            <long_option>cpp</long_option>
+            <has_argument>false</has_argument>
+            <package>cppgen</package>
+            <slot_class>CppGen</slot_class>
+            <parse_order>1</parse_order>
+            <comment>generate cpp file</comment>
+        </option>
+        <option>
+            <short_option>m</short_option>
+            <long_option>makefile</long_option>
+            <has_argument>false</has_argument>
+            <package>makefilegen</package>
+            <slot_class>MakefileGen</slot_class>
+            <parse_order>1</parse_order>
+            <comment>specify filename to generate makefile, default to makefile</comment>
+        </option>
+        <option>
+            <short_option>u</short_option>
+            <long_option>unittest</long_option>
+            <has_argument>false</has_argument>
+            <package>cppunitgen</package>
+            <slot_class>CppUnitGen</slot_class>
+            <parse_order>1</parse_order>
+            <comment>generate unit test class for the specified class. if unit test makefile and main.cc don't exist, will generate them</comment>
+        </option>
+        <option>
+            <short_option>d</short_option>
+            <long_option>doc</long_option>
+            <has_argument>false</has_argument>
+            <package>docgen</package>
+            <slot_class>DocGen</slot_class>
+            <parse_order>1</parse_order>
+            <comment>generate the doxygen document for the header file</comment>
+        </option>
+    </options>
+</config>
