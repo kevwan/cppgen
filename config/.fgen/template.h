@@ -1,5 +1,3 @@
-// $Id$
-
 #ifndef ${wrapper}
 #define ${wrapper}
 
